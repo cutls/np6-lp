@@ -20,11 +20,12 @@ import { MoonIcon, SunIcon, DownloadIcon } from '@chakra-ui/icons'
 
 export default function Home() {
 	const { colorMode, toggleColorMode } = useColorMode()
+	const link = "https://s.0px.io/np6-v1.0.0.zip"
 
 	return (
 		<Box>
 			<Head>
-				<title>np6 - Music Player for macOS</title>
+				<title>np6 - NowPlaying with Mastodon for macOS</title>
 				<meta name="description" content="Play music from Apple Music and Spotify with np6 on macOS." />
 				<link rel="icon" href="/16.png" />
 			</Head>
@@ -76,14 +77,14 @@ export default function Home() {
 								np6
 							</Heading>
 							<Text fontSize="xl" color="gray.500" fontWeight="medium">
-								A lightweight, elegant music player for macOS.
-								Seamlessly play your favorite tracks from Apple Music and Spotify.
+								A lightweight, NowPlaying client of Mastodon for macOS.
+								Good for Apple Music and Spotify.
 							</Text>
 						</Stack>
 						<Stack direction={{ base: 'column', sm: 'row' }} spacing={4}>
 							<Button
 								as="a"
-								href="https://s.0px.io/np6-v1.0.0.app"
+								href={link}
 								size="lg"
 								colorScheme="blue"
 								px={8}
@@ -124,13 +125,13 @@ export default function Home() {
 						<VStack align="start" spacing={4} p={6} borderRadius="xl" bg={colorMode === 'light' ? 'white' : 'gray.800'} boxShadow="sm">
 							<Heading size="md">Apple Music</Heading>
 							<Text color="gray.500">
-								Native integration with Apple Music. Access your library and playlists directly within np6.
+								Native integration with Apple Music.
 							</Text>
 						</VStack>
 						<VStack align="start" spacing={4} p={6} borderRadius="xl" bg={colorMode === 'light' ? 'white' : 'gray.800'} boxShadow="sm">
 							<Heading size="md">Spotify</Heading>
 							<Text color="gray.500">
-								Full Spotify support. Stream your favorite songs and discover new music with ease.
+								Full Spotify support. Play by your phone, NowPlaying by your Mac.
 							</Text>
 						</VStack>
 					</SimpleGrid>
@@ -144,7 +145,7 @@ export default function Home() {
 						<Heading size="lg">Ready to start NowPlaying?</Heading>
 						<Button
 							as="a"
-							href="https://s.0px.io/np6-v1.0.0.app"
+							href={link}
 							size="lg"
 							colorScheme="blue"
 							px={12}
