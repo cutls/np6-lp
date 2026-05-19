@@ -1,0 +1,32 @@
+{
+	"name": "thedesk-lp2",
+	"version": "0.1.1",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "serve out",
+		"lint:fix": "npx @biomejs/biome check --write ./"
+	},
+	"dependencies": {
+		"@chakra-ui/icons": "^2.2.4",
+		"@chakra-ui/next-js": "^2.4.2",
+		"@chakra-ui/provider": "^2.4.2",
+		"@chakra-ui/react": "^2.10.9",
+		"@emotion/react": "^11.14.0",
+		"@emotion/styled": "^11.14.1",
+		"axios": "^1.13.2",
+		"framer-motion": "^12.23.24",
+		"next": "14.2.33",
+		"react": "18.2.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.2.0",
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"serve": "^14.2.3",
+		"typescript": "^5"
+	},
+	"packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
+}
