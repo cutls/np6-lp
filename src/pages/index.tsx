@@ -29,7 +29,7 @@ export default function Home() {
 				<title>np6 - NowPlaying with Mastodon for macOS</title>
 				<meta
 					name="description"
-					content="Play music from Apple Music and Spotify with np6 on macOS."
+					content="NowPlaying to Mastodon from Apple Music and Spotify with np6 on macOS."
 				/>
 				<link rel="icon" href="/16.png" />
 			</Head>
