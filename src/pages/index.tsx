@@ -14,19 +14,23 @@ import {
 	IconButton,
 	SimpleGrid,
 	Center,
-} from '@chakra-ui/react'
-import Head from 'next/head'
-import { MoonIcon, SunIcon, DownloadIcon } from '@chakra-ui/icons'
+} from "@chakra-ui/react";
+import { BsAppleMusic, BsSpotify } from "react-icons/bs";
+import Head from "next/head";
+import { MoonIcon, SunIcon, DownloadIcon } from "@chakra-ui/icons";
 
 export default function Home() {
-	const { colorMode, toggleColorMode } = useColorMode()
-	const link = "https://s.0px.io/np6-v1.0.0.zip"
+	const { colorMode, toggleColorMode } = useColorMode();
+	const link = "https://s.0px.io/np6-v1.0.0.zip";
 
 	return (
 		<Box>
 			<Head>
 				<title>np6 - NowPlaying with Mastodon for macOS</title>
-				<meta name="description" content="Play music from Apple Music and Spotify with np6 on macOS." />
+				<meta
+					name="description"
+					content="Play music from Apple Music and Spotify with np6 on macOS."
+				/>
 				<link rel="icon" href="/16.png" />
 			</Head>
 
@@ -36,12 +40,14 @@ export default function Home() {
 					<Flex justify="space-between" align="center">
 						<Flex align="center" gap={2}>
 							<Image src="/64.png" alt="np6 logo" w="32px" h="32px" />
-							<Heading size="md" fontWeight="bold">np6</Heading>
+							<Heading size="md" fontWeight="bold">
+								np6
+							</Heading>
 						</Flex>
 						<Flex align="center" gap={4}>
 							<IconButton
 								aria-label="Toggle color mode"
-								icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+								icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
 								onClick={toggleColorMode}
 								variant="ghost"
 							/>
@@ -73,15 +79,29 @@ export default function Home() {
 							boxShadow="2xl"
 						/>
 						<Stack spacing={4}>
-							<Heading as="h1" size="3xl" fontWeight="black" letterSpacing="tight">
+							<Heading
+								as="h1"
+								size="3xl"
+								fontWeight="black"
+								letterSpacing="tight"
+							>
 								np6
 							</Heading>
+							<Flex justify="center" align="center" mb={5}>
+								<Text fontSize="2xl" fontWeight="bold">
+									for
+								</Text>
+								<Box w={2} />
+								<BsAppleMusic size={30} />
+								<Box w={2} />
+								<BsSpotify size={30} />
+							</Flex>
 							<Text fontSize="xl" color="gray.500" fontWeight="medium">
-								A lightweight, NowPlaying client of Mastodon for macOS.
-								Good for Apple Music and Spotify.
+								A lightweight, NowPlaying client of Mastodon for macOS. Good for
+								Apple Music and Spotify.
 							</Text>
 						</Stack>
-						<Stack direction={{ base: 'column', sm: 'row' }} spacing={4}>
+						<Stack direction={{ base: "column", sm: "row" }} spacing={4}>
 							<Button
 								as="a"
 								href={link}
@@ -102,7 +122,7 @@ export default function Home() {
 			</Box>
 
 			{/* Screenshot Section */}
-			<Box bg={colorMode === 'light' ? 'gray.50' : 'gray.900'} py={20}>
+			<Box bg={colorMode === "light" ? "gray.50" : "gray.900"} py={20}>
 				<Container maxW="container.xl">
 					<Center>
 						<Image
@@ -112,7 +132,7 @@ export default function Home() {
 							boxShadow="2xl"
 							maxW="300px"
 							border="4px solid"
-							borderColor={colorMode === 'light' ? 'white' : 'gray.800'}
+							borderColor={colorMode === "light" ? "white" : "gray.800"}
 						/>
 					</Center>
 				</Container>
@@ -122,16 +142,31 @@ export default function Home() {
 			<Box py={20}>
 				<Container maxW="container.lg">
 					<SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-						<VStack align="start" spacing={4} p={6} borderRadius="xl" bg={colorMode === 'light' ? 'white' : 'gray.800'} boxShadow="sm">
+						<VStack
+							align="center"
+							spacing={4}
+							p={6}
+							borderRadius="xl"
+							bg={colorMode === "light" ? "white" : "gray.800"}
+							boxShadow="sm"
+						>
+							<BsAppleMusic size={40} />
 							<Heading size="md">Apple Music</Heading>
-							<Text color="gray.500">
-								Native integration with Apple Music.
-							</Text>
+							<Text color="gray.500">Native integration with Apple Music.</Text>
 						</VStack>
-						<VStack align="start" spacing={4} p={6} borderRadius="xl" bg={colorMode === 'light' ? 'white' : 'gray.800'} boxShadow="sm">
+						<VStack
+							align="center"
+							spacing={4}
+							p={6}
+							borderRadius="xl"
+							bg={colorMode === "light" ? "white" : "gray.800"}
+							boxShadow="sm"
+						>
+							<BsSpotify size={40} />
 							<Heading size="md">Spotify</Heading>
 							<Text color="gray.500">
-								Full Spotify support. Play by your phone, NowPlaying by your Mac.
+								Full Spotify support. Play by your phone, NowPlaying by your
+								Mac.
 							</Text>
 						</VStack>
 					</SimpleGrid>
@@ -158,9 +193,31 @@ export default function Home() {
 			</Box>
 
 			{/* Footer */}
-			<Box as="footer" py={10} borderTop="1px solid" borderColor={colorMode === 'light' ? 'gray.100' : 'gray.800'}>
+			<Box
+				as="footer"
+				py={10}
+				borderTop="1px solid"
+				borderColor={colorMode === "light" ? "gray.100" : "gray.800"}
+			>
 				<Container maxW="container.xl">
-					<Flex direction={{ base: 'column', md: 'row' }} justify="space-between" align="center" gap={4}>
+					<Flex
+						direction={{ base: "column", md: "row" }}
+						justify="space-between"
+						align="center"
+						gap={4}
+					>
+						<Flex align="center">
+							<Text color="gray.500" fontSize="sm">
+								Most of all code is generated by Google Gemini
+							</Text>
+							<Image
+								ml={1}
+								src="/gemini.svg"
+								alt="gemini logo"
+								w="16px"
+								h="16px"
+							/>
+						</Flex>
 						<Text color="gray.500" fontSize="sm">
 							© 2026 cutls. All rights reserved.
 						</Text>
@@ -168,5 +225,5 @@ export default function Home() {
 				</Container>
 			</Box>
 		</Box>
-	)
+	);
 }
