@@ -21,7 +21,7 @@ import { MoonIcon, SunIcon, DownloadIcon } from "@chakra-ui/icons";
 
 export default function Home() {
 	const { colorMode, toggleColorMode } = useColorMode();
-	const link = "https://s.0px.io/np6-v1.0.0.zip";
+	const link = "https://github.com/cutls/np6-lp/releases/download/v1.0.0/np6-v1.0.0.zip";
 
 	return (
 		<Box>
@@ -53,7 +53,7 @@ export default function Home() {
 							/>
 							<Button
 								as="a"
-								href="https://s.0px.io/np6-v1.0.0.app"
+								href="https://github.com/cutls/np6-lp/releases/download/v1.0.0/np6-v1.0.0.zip"
 								colorScheme="blue"
 								borderRadius="full"
 								size="sm"
