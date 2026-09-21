@@ -21,9 +21,9 @@ import { MoonIcon, SunIcon, DownloadIcon } from "@chakra-ui/icons";
 
 export default function Home() {
 	const { colorMode, toggleColorMode } = useColorMode();
-	const version = "1.1.0";
+	const version = "1.2.0";
 	const link =
-		"https://github.com/cutls/np6-lp/releases/download/v1.1.0/np6-v1.1.0.zip";
+		`https://github.com/cutls/np6-lp/releases/download/v${version}/np6-v${version}.zip`
 
 	return (
 		<Box>
