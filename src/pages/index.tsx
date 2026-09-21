@@ -21,7 +21,9 @@ import { MoonIcon, SunIcon, DownloadIcon } from "@chakra-ui/icons";
 
 export default function Home() {
 	const { colorMode, toggleColorMode } = useColorMode();
-	const link = "https://github.com/cutls/np6-lp/releases/download/v1.1.0/np6-v1.1.0.zip";
+	const version = "1.1.0";
+	const link =
+		"https://github.com/cutls/np6-lp/releases/download/v1.1.0/np6-v1.1.0.zip";
 
 	return (
 		<Box>
@@ -53,13 +55,13 @@ export default function Home() {
 							/>
 							<Button
 								as="a"
-								href="https://github.com/cutls/np6-lp/releases/download/v1.0.0/np6-v1.0.0.zip"
+								href={link}
 								colorScheme="blue"
 								borderRadius="full"
 								size="sm"
 								leftIcon={<DownloadIcon />}
 							>
-								Download
+								Download (v{version})
 							</Button>
 						</Flex>
 					</Flex>
@@ -96,6 +98,9 @@ export default function Home() {
 								<Box w={2} />
 								<BsSpotify size={30} />
 							</Flex>
+							<Text fontSize="xl" color="gray.500" fontWeight="medium">
+								v{version}
+							</Text>
 							<Text fontSize="xl" color="gray.500" fontWeight="medium">
 								A lightweight, NowPlaying client of Mastodon for macOS. Good for
 								Apple Music and Spotify.
@@ -186,7 +191,7 @@ export default function Home() {
 							px={12}
 							borderRadius="full"
 						>
-							Download Now
+							Download v{version}
 						</Button>
 					</VStack>
 				</Container>
